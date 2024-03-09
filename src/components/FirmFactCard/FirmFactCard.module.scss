@@ -1,0 +1,24 @@
+.FirmFactCardWrapper {
+  display: flex;
+  background-color: #FFF;
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.FirmFactCardDefault:hover {
+  background-color: #07C06A;
+}
+
+.FirmFactCardBorder:hover {
+  box-sizing: border-box;
+  border: 1rem solid #07C06A;
+  
+}
+.FirmFactCardBorder .buttonContainer:hover {
+  background-color: #07C06A;
+  border: 1px solid #FFF;
+}
