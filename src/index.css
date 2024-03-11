@@ -12,17 +12,25 @@ body {
   font-weight: 400;
   letter-spacing: 0px;
   text-align: left;
-  background-color: cadetblue;
+  background-color: #2D3E4E;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  height: 100dvh;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width:768px)  {
+  * {
+    font-size: 32px;
+  }
+}
+
+@media (min-width:1680px)  {
+  * {
+    font-size: 16px;
+  }
 }

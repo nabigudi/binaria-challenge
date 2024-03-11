@@ -2,12 +2,16 @@ import styles from './FirmFactCard.module.scss';
 interface FirmFactCardProps {
   variant?: 'default' | 'border',
   children: React.ReactNode
+  disabled?: boolean,
+  isHovered: (x: number) => void,
+  item: number,
+  clear: () => void
 }
 
-const FirmFactCard = ({variant = 'default', children} : FirmFactCardProps) => { 
+const FirmFactCard = ({variant = 'default', disabled = false, isHovered, item, clear, children} : FirmFactCardProps) => { 
   if (!children) return null;
   return(
-    <div className={`${styles.FirmFactCardWrapper} ${variant === 'default' ? styles.FirmFactCardDefault : styles.FirmFactCardBorder}`}>
+    <div onMouseEnter={()=>isHovered(item)} onMouseLeave ={()=>clear()} className={`${styles.FirmFactCardWrapper} ${!disabled && variant === 'default' && styles.FirmFactCardDefault} ${!disabled && variant === 'border' && styles.FirmFactCardBorder}`}>
       {children}
     </div>
   )
